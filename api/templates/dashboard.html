@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>MiniDyno Dashboard</h2>
+<div class="cards">
+  <div class="card"><h3>Stats</h3><canvas id="statsChart"></canvas></div>
+  <div class="card"><h3>Quick Actions</h3>
+    <form method="get" action="/punishments"><button>View Punishments</button></form>
+    <form method="get" action="/filters"><button>Manage Filters</button></form>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('statsChart');
+if(ctx){
+  new Chart(ctx,{type:'bar',data:{labels:['bans','mutes','warns'],datasets:[{label:'count',data:[0,0,0]}]}});
+}
+</script>
+{% endblock %}

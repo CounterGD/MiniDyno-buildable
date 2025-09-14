@@ -1,0 +1,7 @@
+{
+  "name": "minidyno-wrapper-node",
+  "version": "0.1.0",
+  "scripts": {
+    "call-api": "node call_api.js"
+  }
+}

@@ -1,0 +1,28 @@
+py = python3
+bot = bot.py
+
+rule run_bot
+  command = $py $bot
+  description = 🚀 Running MiniDyno Discord Bot
+
+rule run_api
+  command = $py -m uvicorn api.server:app --reload
+  description = 🌐 Running MiniDyno API
+
+rule lint
+  command = $py -m flake8 .
+  description = 🔍 Linting Python code
+
+rule docker_build
+  command = docker build -t minidyno .
+  description = 🐳 Building Docker image
+
+rule docker_run
+  command = docker run -it --rm -p 8000:8000 minidyno
+  description = 🐳 Running MiniDyno container
+
+build run_bot: run_bot
+build run_api: run_api
+build lint: lint
+build docker_build: docker_build
+build docker_run: docker_run

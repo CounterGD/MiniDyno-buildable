@@ -1,0 +1,8 @@
+{
+    "TOKEN": "YOUR_DISCORD_BOT_TOKEN",
+    "PREFIX": "!",
+    "OWNER_ID": 123456789012345678,
+    "DEFAULT_GUILD": 0,
+    "API_SECRET": "supersecretkey",
+    "LOG_CHANNEL_ID": 0
+}

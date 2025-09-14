@@ -1,0 +1,6 @@
+py-cord>=2.1.0
+fastapi
+uvicorn[standard]
+jinja2
+python-jose[cryptography]
+aiofiles

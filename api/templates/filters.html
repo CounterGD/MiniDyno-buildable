@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% block content %}
+<h2>Regex Filters</h2>
+<form method="post" action="/filters/add">
+    <input name="pattern" placeholder="Regex pattern (e.g. f\W*ck)" required>
+    <button>Add</button>
+</form>
+<ul>
+{% for r in rows %}
+    <li>{{ r['pattern'] }} <form style="display:inline" method="post" action="/filters/delete/{{ r['id'] }}"><button>Delete</button></form></li>
+{% endfor %}
+</ul>
+{% endblock %}

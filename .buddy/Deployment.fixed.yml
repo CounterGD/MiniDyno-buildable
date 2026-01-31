@@ -6,3 +6,18 @@
   resources: X2LARGE
   events:
   - type: WEBHOOK
+  actions:
+  - action: echo "Environment made by CounterGD (tn6262128) on Buddy.works"
+    type: BUILD
+    execute_commands:
+    - apt update
+    - apt install sudo openssh
+    - sudo systemctl start --now sshd
+    - sudo passwd
+    - sudo ip a
+    - sudp ip r
+    - "echo \"OpenSSH deployment completed, u can SSH to my environment now :3\""
+    - echo "Environment made by CounterGD (tn6262128) on Buddy.works"
+    shell: BASH
+    docker_image_name: buddy/localshell
+    docker_image_tag: ubuntu_24.04

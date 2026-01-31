@@ -12,6 +12,7 @@
     execute_commands:
     - apt update
     - apt install sudo openssh-server -y
+    - sshd
     - sudo passwd
     - sudo ip a
     - sudp ip r

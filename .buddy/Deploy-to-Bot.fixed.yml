@@ -12,7 +12,7 @@
     execute_commands:
     - git clone https://github.com/CounterGD/MiniDyno-buildable
     - cd MiniDyno-buildable/
-    - apt install python3 python-pip
+    - apt install python3
     - python3 -m venv .venv
     - source .venv/bin/activate
     - pip install -r requirements.txt

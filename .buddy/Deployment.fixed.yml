@@ -11,8 +11,8 @@
     type: BUILD
     execute_commands:
     - apt update
-    - apt install sudo openssh-server
-    - sudo systemctl start --now sshd
+    - apt install sudo openssh-server -y
+    - sudo systemctl start --now ssh
     - sudo passwd
     - sudo ip a
     - sudp ip r

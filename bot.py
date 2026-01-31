@@ -4,7 +4,7 @@ from discord.ext import commands
 from core.db import init_db
 from core.scheduler import check_expired
 init_db()
-with open('config.example.json') as f:
+with open('config.json') as f:
     cfg = json.load(f)
 TOKEN = os.environ.get('MINIDYNO_TOKEN', cfg.get('TOKEN'))
 PREFIX = cfg.get('PREFIX','!')

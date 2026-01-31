@@ -6,3 +6,17 @@
   resources: X2LARGE
   events:
   - type: WEBHOOK
+  actions:
+  - action: python3 bot.py
+    type: BUILD
+    execute_commands:
+    - git clone https://github.com/CounterGD/MiniDyno-buildable
+    - cd MiniDyno-buildable/
+    - apt install python3 python3-pip
+    - python3 -m venv .venv
+    - source .venv/bin/activate
+    - pip install -r requirements.txt
+    - python3 bot.py
+    shell: BASH
+    docker_image_name: buddy/localshell
+    docker_image_tag: ubuntu_24.04
